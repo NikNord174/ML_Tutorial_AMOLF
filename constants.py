@@ -18,7 +18,7 @@ loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD
 
 # model parameters
-version = 0.1
+version = 1.0
 model_name = f'results/model_{version}.pth'
 load = False  # parameter to specify loading parameters for model
 load_version = 0.1
