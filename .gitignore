@@ -1,0 +1,7 @@
+# environment files
+venv/
+__pycache__/
+models/__pycache__/
+
+# data files
+data/
