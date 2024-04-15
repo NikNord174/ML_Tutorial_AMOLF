@@ -10,13 +10,11 @@ class CNN(nn.Module):
         super().__init__()
         out_channels = [2, 4, 8, 16]
         shape = 20
-        self.flatten = nn.Flatten()
-        self.conv_1 = self.conv(1, 2, 3)
-        self.conv_2 = self.conv(2, 4, 3)
-        self.conv_3 = self.conv(4, 8, 3)
-        self.conv_4 = self.conv(8, 16, 3)
         self.conv_layers = nn.Sequential(
-            self.conv_1, self.conv_2, self.conv_3, self.conv_4)
+            self.conv(1, 2, 3),
+            self.conv(2, 4, 3),
+            self.conv(4, 8, 3),
+            self.conv(8, 16, 3))
         self.layer_stack = nn.Sequential(
             nn.Linear(shape*shape*out_channels[-1], 10))
 
