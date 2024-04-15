@@ -16,3 +16,4 @@ python3 -m pip install -r requirements.txt
 python3 main.py
 ```
 or go to step-by-step.ipynb for more detailed description of training process.
+4. To try training with different model change model argument in main.py
