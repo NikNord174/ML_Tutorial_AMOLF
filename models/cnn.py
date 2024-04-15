@@ -4,6 +4,8 @@ from torch import flatten
 
 
 class CNN(nn.Module):
+    """Convolutional Neural Network
+    """
     def __init__(self):
         super().__init__()
         out_channels = [2, 4, 8, 16]
