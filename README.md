@@ -1,4 +1,5 @@
-This is a repository with an example of Neural Networks in PyTorch.
+# Tutorial for ML community at AMOLF
+This repository is aimed to show the simpliest training process of Neural Networks using PyTorch.
 
 ## Quick start
 
