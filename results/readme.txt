@@ -1,0 +1,1 @@
+This folder is spicifically for results. All files from that folder do not go to remote repository.
