@@ -3,7 +3,7 @@ This repository is aimed to show the simpliest training process of Neural Networ
 
 ## Quick start
 
-For Mac users:
+### For Mac users:
 
 1. Create and activate an environment
 ```
@@ -20,7 +20,7 @@ python3 main.py
 ```
 or go to step-by-step.ipynb for more detailed description of training process.
 
-For Windows users:
+### For Windows users:
 
 1. Create and activate an environment
 ```
