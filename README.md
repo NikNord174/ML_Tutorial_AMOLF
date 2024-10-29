@@ -18,6 +18,7 @@ python -m venv venv
 venv/Scripts/activate
 ```
 (venv) should appear at the beginning of the row in the terminal.
+
 2. Install requirements
 ```
 pip install -r requirements.txt
