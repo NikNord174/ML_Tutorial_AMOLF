@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 from torch import flatten
+import numpy as np
 
 
 class CNN(nn.Module):
@@ -8,15 +9,33 @@ class CNN(nn.Module):
     """
     def __init__(self):
         super().__init__()
-        out_channels = [2, 4, 8, 16]
-        shape = 20
+        img_shape = 28  # initial image size
+        kernel_size = 3  # kernel size for convolutional layers
+        out_channels = [8]  # list of features in conv layers
+
+        # make sure that linear layers always get the right amount of neurons
+        for _ in range(len(out_channels)):
+            output_shape = img_shape - kernel_size + 1
+            img_shape = output_shape
+        out_shape = img_shape
+        linear_input = out_shape*out_shape*out_channels[-1]
+
+        # create a stack of convolutions
         self.conv_layers = nn.Sequential(
-            self.conv(1, 2, 3),
-            self.conv(2, 4, 3),
-            self.conv(4, 8, 3),
-            self.conv(8, 16, 3))
+            self.conv(1, out_channels[0], kernel_size)
+        )
+        if len(out_channels) > 1:
+            for i in np.arange(1, len(out_channels)):
+                self.conv_layers.append(
+                    self.conv(
+                        out_channels[i-1],
+                        out_channels[i],
+                        kernel_size))
+
+        # create a stack of linear layers
         self.layer_stack = nn.Sequential(
-            nn.Linear(shape*shape*out_channels[-1], 10))
+            nn.Linear(linear_input, 1024),
+            nn.Linear(1024, 10))
 
     def conv(
             self,

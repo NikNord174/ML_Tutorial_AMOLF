@@ -3,6 +3,13 @@ This repository is aimed to show the simpliest training process of Neural Networ
 
 ## Quick start
 
+Download the repository to your computer with the command
+```
+git clone https://github.com/NikNord174/ML_Tutorial_AMOLF.git
+```
+
+Then, depends on your OS, follow the steps:
+
 ### For Mac users:
 
 1. Create and activate an environment
@@ -12,7 +19,7 @@ source venv/bin/activate
 ```
 2. Install requirements
 ```
-python3 -m pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 3. To start training
 ```

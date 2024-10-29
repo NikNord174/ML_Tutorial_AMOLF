@@ -1,7 +1,7 @@
 import torch
 
 import constants
-from models.FCM import NeuralNetwork
+# from models.FCM import NeuralNetwork
 from models.cnn import CNN
 from train_test import train, test
 from dataset import train_dataloader, test_dataloader
@@ -20,8 +20,8 @@ loss_fn = constants.loss_fn
 lr = constants.lr
 optimizer = constants.optimizer(params=model.parameters(), lr=lr)
 
-for t in range(constants.epochs):
-    print(f"Epoch {t+1}\n-------------------------------")
+for epoch in range(constants.epochs):
+    print(f"Epoch {epoch+1}\n-------------------------------")
     train(
         train_dataloader,
         model,
