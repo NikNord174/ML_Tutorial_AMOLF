@@ -1,14 +1,14 @@
 import torch
 
 import constants
-# from models.FCM import NeuralNetwork
-from models.cnn import CNN
+from models.FCM import NeuralNetwork
+# from models.cnn import CNN
 from train_test import train, test
 from dataset import train_dataloader, test_dataloader
 
 
 # import learning parameters
-model = CNN()
+model = NeuralNetwork()
 model = model.to(constants.device)
 
 # load model
